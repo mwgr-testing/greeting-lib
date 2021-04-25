@@ -4,22 +4,24 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<!-- <parent>...</parent> -->
+	<parent>
+		<groupId>net.mwgr.testing.parent</groupId>
+		<artifactId>common-parent</artifactId>
+		<version>1.1</version>
+	</parent>
 
-	<groupId>%%PROJECT_GROUP_ID%%</groupId>
-	<artifactId>%%PROJECT_ARTIFACT_ID%%</artifactId>
-	<version>%%PROJECT_VERSION%%</version>
-	<!-- <packaging>...</packaging> -->
+	<groupId>net.mwgr.testing.github.greeting</groupId>
+	<artifactId>greeting-lib</artifactId>
+	<version>1.0-SNAPSHOT</version>
 
-	<name>%%PROJECT_NAME%%</name>
-	<description>%%PROJECT_DESCRIPTION%%</description>
-	<inceptionYear>%%YEAR%%</inceptionYear>
-	<url>https://github.com/%%GITHUB_REPO_OWNER%%/%%GITHUB_REPO_NAME%%</url>
+	<name>MWGR Testing (GitHub) - Greeting Library</name>
+	<description>A library for the greeting application in the testing area.</description>
+	<inceptionYear>2021</inceptionYear>
+	<url>https://github.com/mwgr-testing/greeting-lib</url>
 
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<maven-deploy-plugin.version>3.0.0-M1</maven-deploy-plugin.version>
+		<junit.version>5.7.0</junit.version>
+		<hamcrest.version>2.2</hamcrest.version>
 	</properties>
 
 	<licenses>
@@ -29,24 +31,27 @@
 		</license>
 	</licenses>
 
-	<!-- <organization>...</organization> -->
-	<!-- <developers>...</developers> -->
-	<!-- <contributors>...</contributors> -->
-	<!-- <mailingLists>...</mailingLists> -->
+	<developers>
+		<developer>
+			<id>MWGR</id>
+			<name>Mirko Wagner</name>
+			<email>seelenvirtuose@gmail.com</email>
+		</developer>
+	</developers>
 
 	<scm>
-		<url>https://github.com/%%GITHUB_REPO_OWNER%%/%%GITHUB_REPO_NAME%%</url>
-		<connection>scm:git:https://github.com/%%GITHUB_REPO_OWNER%%/%%GITHUB_REPO_NAME%%.git</connection>
-		<developerConnection>scm:git:https://github.com/%%GITHUB_REPO_OWNER%%/%%GITHUB_REPO_NAME%%.git</developerConnection>
+		<url>https://github.com/mwgr-testing/greeting-lib</url>
+		<connection>scm:git:https://github.com/mwgr-testing/greeting-lib.git</connection>
+		<developerConnection>scm:git:https://github.com/mwgr-testing/greeting-lib.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 	<issueManagement>
 		<system>GitHub Issues</system>
-		<url>https://github.com/%%GITHUB_REPO_OWNER%%/%%GITHUB_REPO_NAME%%/issues</url>
+		<url>https://github.com/mwgr-testing/greeting-lib/issues</url>
 	</issueManagement>
 	<ciManagement>
 		<system>GitHub Actions</system>
-		<url>https://github.com/%%GITHUB_REPO_OWNER%%/%%GITHUB_REPO_NAME%%/actions</url>
+		<url>https://github.com/mwgr-testing/greeting-lib/actions</url>
 	</ciManagement>
 	<distributionManagement>
 		<snapshotRepository>
@@ -59,32 +64,30 @@
 		</repository>
 		<site>
 			<id>github</id>
-			<url>scm:git:https://github.com/%%GITHUB_REPO_OWNER%%/%%GITHUB_REPO_NAME%%.git</url>
+			<url>scm:git:https://github.com/mwgr-testing/greeting-lib.git</url>
 		</site>
 	</distributionManagement>
 
-	<!-- <repositories>...</repositories> -->
-	<!-- <pluginRepositories>...</pluginRepositories> -->
+	<repositories>
+		<repository>
+			<id>mwgr-pkgs</id>
+			<url>https://pkgs.mwgr.net/maven-public</url>
+		</repository>
+	</repositories>
 
-	<!-- <modules>...</modules> -->
-
-	<!-- <dependencyManagement>...</dependencyManagement> -->
-	<!-- <dependencies>...</dependencies> -->
-
-	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-deploy-plugin</artifactId>
-					<version>${maven-deploy-plugin.version}</version>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
-
-	<!-- <reporting>...</reporting> -->
-
-	<!-- <profiles>...</profiles> -->
+	<dependencies>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest</artifactId>
+			<version>${hamcrest.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
 </project>
