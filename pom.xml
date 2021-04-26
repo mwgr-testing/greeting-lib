@@ -12,7 +12,7 @@
 
 	<groupId>net.mwgr.testing.github.greeting</groupId>
 	<artifactId>greeting-lib</artifactId>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.2-SNAPSHOT</version>
 
 	<name>MWGR Testing (GitHub) - Greeting Library</name>
 	<description>A library for the greeting application in the testing area.</description>
